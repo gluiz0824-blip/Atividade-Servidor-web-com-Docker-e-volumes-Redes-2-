@@ -1,0 +1,478 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20261122204029
+Nome de Usuário: LUIZZMORAIS\luizg
+Executar como Usuário: LUIZZMORAIS\luizg
+Nome da Configuração: 
+Computador: LUIZZMORAIS (Microsoft Windows NT 10.0.26300.0)
+Aplicativo Host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Users\luizg\Desktop\atividade-docker-luiz\coletar-evidencias.ps1
+ID do Processo: 23212
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PRE-REQUISITOS
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker version
+Client:
+ Version:           29.6.1
+ API version:       1.55
+ Go version:        go1.26.4
+ Git commit:        8900f1d
+ Built:             Fri Jun 26 11:43:32 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.81.0 (232925)
+ Engine:
+  Version:          29.6.1
+  API version:      1.55 (minimum version 1.40)
+  Go version:       go1.26.4
+  Git commit:       8ec5ab3
+  Built:            Fri Jun 26 11:41:04 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.2.5
+  GitCommit:        e53c7c1516c3b2bff98eb76f1f4117477e6f4e66
+ runc:
+  Version:          1.3.6
+  GitCommit:        v1.3.6-0-g491b69ba
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+docker : Error response from daemon: get logs-web: no such volume
+No C:\Users\luizg\Desktop\atividade-docker-luiz\coletar-evidencias.ps1:80 caractere:5
++     docker volume inspect logs-web *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error response ... no such volume:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+PARTE 1 - BIND MOUNT
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker run -d --name web-bind -p 8080:80 -v "${PWD}/site:/usr/share/nginx/html:ro" nginx:alpine
+e23d06af7ef02d52a79858afd5829d69a3eb26b9b78d02bb97d3a356a4594a9c
+
+Abra http://localhost:8080/ e http://localhost:8080/sobre.html no navegador.
+Salve o print real da pagina inicial em evidencias/parte1-01-pagina-antes.png.
+C:\Users\luizg\Desktop\atividade-docker-luiz\evidencias\parte1-01-pagina-antes.png
+PS>TerminatingError(): "Falta o print evidencias/parte1-01-pagina-antes.png"
+PAROU: Falta o print evidencias/parte1-01-pagina-antes.png
+As evidencias ja produzidas foram preservadas. Envie esta mensagem ao assistente.
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20261122204337
+**********************
+**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20261122204703
+Nome de Usuário: LUIZZMORAIS\luizg
+Executar como Usuário: LUIZZMORAIS\luizg
+Nome da Configuração: 
+Computador: LUIZZMORAIS (Microsoft Windows NT 10.0.26300.0)
+Aplicativo Host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Users\luizg\Desktop\atividade-docker-luiz\coletar-evidencias.ps1 -RetomarParte1
+ID do Processo: 12264
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PRE-REQUISITOS
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker version
+Client:
+ Version:           29.6.1
+ API version:       1.55
+ Go version:        go1.26.4
+ Git commit:        8900f1d
+ Built:             Fri Jun 26 11:43:32 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.81.0 (232925)
+ Engine:
+  Version:          29.6.1
+  API version:      1.55 (minimum version 1.40)
+  Go version:       go1.26.4
+  Git commit:       8ec5ab3
+  Built:            Fri Jun 26 11:41:04 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.2.5
+  GitCommit:        e53c7c1516c3b2bff98eb76f1f4117477e6f4e66
+ runc:
+  Version:          1.3.6
+  GitCommit:        v1.3.6-0-g491b69ba
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+docker : Error response from daemon: get logs-web: no such volume
+No C:\Users\luizg\Desktop\atividade-docker-luiz\coletar-evidencias.ps1:88 caractere:5
++     docker volume inspect logs-web *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error response ... no such volume:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+PARTE 1 - BIND MOUNT
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+Retomando o mesmo container: e23d06af7ef02d52a79858afd5829d69a3eb26b9b78d02bb97d3a356a4594a9c 2026-11-22T23:40:36.974922867Z
+
+Captura real ja salva: evidencias/parte1-01-pagina-antes.png
+HTML alterado no host. Container e horario de inicio continuam iguais.
+Recarregue a pagina antes de salvar o segundo print.
+Captura real ja salva: evidencias/parte1-02-pagina-depois.png
+PARTE 1 - CURL (SAIDAS REAIS)
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> curl.exe -isS http://localhost:8080/
+HTTP/1.1 200 OK
+Server: nginx/1.31.9
+Date: Sun, 22 Nov 2026 23:47:03 GMT
+Content-Type: text/html
+Content-Length: 1052
+Last-Modified: Sun, 22 Nov 2026 23:47:03 GMT
+Connection: keep-alive
+ETag: "6b037ef7-41c"
+Accept-Ranges: bytes
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Docker — Servidor Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 720px; margin: 64px auto;
+               padding: 0 24px; line-height: 1.7; color: #222; }
+        h1 { font-size: 28px; margin-bottom: 20px; }
+        .dados { padding: 20px 24px; background: #f5f5f5; border-radius: 8px; }
+        .dados p { margin: 6px 0; }
+        a { color: #1459a6; }
+    </style>
+</head>
+<body>
+    <h1>Atividade — Servidor web com Docker e volumes</h1>
+    <div class="dados">
+        <p><strong>Nome completo:</strong> Luiz Guilherme Prado Morais</p>
+        <p><strong>Matrícula:</strong> 20242003300398</p>
+        <p><strong>Turma:</strong> CIC1001 A03 — Redes de Computadores 2</p>
+        <p><strong>Versão:</strong> versão 2</p>
+    </div>
+    <p><a href="/sobre.html">O que é um volume Docker?</a></p>
+</body>
+</html>
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 1 - CURL DA PAGINA SOBRE
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> curl.exe -isS http://localhost:8080/sobre.html
+HTTP/1.1 200 OK
+Server: nginx/1.31.9
+Date: Sun, 22 Nov 2026 23:47:04 GMT
+Content-Type: text/html
+Content-Length: 843
+Last-Modified: Mon, 23 Nov 2026 02:15:34 GMT
+Connection: keep-alive
+ETag: "6b03a1c6-34b"
+Accept-Ranges: bytes
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre — Volumes Docker</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 720px; margin: 64px auto;
+               padding: 0 24px; line-height: 1.7; color: #222; }
+        a { color: #1459a6; }
+    </style>
+</head>
+<body>
+    <h1>O que é um volume Docker?</h1>
+    <p>Um volume Docker é um recurso para manter dados fora da camada gravável de um
+       contêiner. Como seu armazenamento não depende da existência do contêiner,
+       os arquivos podem continuar disponíveis depois que ele é removido e
+       recriado, além de poderem ser compartilhados entre contêineres.</p>
+    <p><a href="/">Voltar à página inicial</a></p>
+</body>
+</html>
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 1 - SOMENTE LEITURA E MONTAGEM
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker exec web-bind touch /usr/share/nginx/html/teste.txt
+PS> docker inspect web-bind --format '{{json .Mounts}}'
+[{"Type":"bind","Source":"C:\\Users\\luizg\\Desktop\\atividade-docker-luiz/site","Destination":"/usr/share/nginx/html","Mode":"ro","RW":false,"Propagation":"rprivate"}]
+Identidade antes: e23d06af7ef02d52a79858afd5829d69a3eb26b9b78d02bb97d3a356a4594a9c 2026-11-22T23:40:36.974922867Z
+Identidade depois: e23d06af7ef02d52a79858afd5829d69a3eb26b9b78d02bb97d3a356a4594a9c 2026-11-22T23:40:36.974922867Z
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> docker rm -f web-bind
+web-bind
+PARTE 2 - BUILD DA IMAGEM
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker build --progress plain -t meu-web:1.0 .
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 2 - IMAGEM E ROTA SAUDE
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker images meu-web
+IMAGE         ID             DISK USAGE   CONTENT SIZE   EXTRA
+meu-web:1.0   7f756ba75b2b       93.7MB         26.4MB
+PS> docker volume create logs-web
+logs-web
+PS> docker run -d --name web-vol -p 8081:80 -v logs-web:/var/log/nginx meu-web:1.0
+975142c49aec3c554dbe5d01983bd76655a3d23423e94d13b423c74febf436fc
+
+PS> curl.exe -isS http://localhost:8081/saude
+HTTP/1.1 200 OK
+Server: nginx/1.31.9
+Date: Sun, 22 Nov 2026 23:47:09 GMT
+Content-Type: text/plain
+Content-Length: 20
+Connection: keep-alive
+
+ok - 20242003300398
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/
+200
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/sobre.html
+200
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/saude
+200
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/pagina-inexistente
+404
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/saude
+200
+PARTE 2 - LOG COM RESPOSTAS 200 E 404
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker exec web-vol cat /var/log/nginx/acessos.log
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /sobre.html HTTP/1.1" 200 843 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /pagina-inexistente HTTP/1.1" 404 153 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 2 - VOLUME INSPECT
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker volume inspect logs-web
+[
+    {
+        "CreatedAt": "2026-11-22T23:47:09Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/logs-web/_data",
+        "Name": "logs-web",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 3 - CONTAGEM E REMOCAO
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker exec web-vol wc -l /var/log/nginx/acessos.log
+7 /var/log/nginx/acessos.log
+PS> docker rm -f web-vol
+web-vol
+PS> docker volume ls
+DRIVER    VOLUME NAME
+local     logs-web
+local     supabase_db_Vencii
+local     supabase_db_praia-hub
+local     supabase_db_praia-hub-mvp-isolated
+local     supabase_edge_runtime_Vencii
+local     supabase_edge_runtime_praia-hub
+local     supabase_edge_runtime_praia-hub-mvp-isolated
+local     supabase_storage_Vencii
+local     supabase_storage_praia-hub
+local     supabase_storage_praia-hub-mvp-isolated
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 3 - RECRIACAO COM O MESMO VOLUME
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker run -d --name web-vol -p 8081:80 -v logs-web:/var/log/nginx meu-web:1.0
+376b522518f3894e3f2d8781a6538e00de0557e53b6dc011767ee4e43d0153b0
+
+
+PS> curl.exe -sS http://localhost:8081/saude
+ok - 20242003300398
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/apos-recriacao
+404
+PS> docker exec web-vol wc -l /var/log/nginx/acessos.log
+10 /var/log/nginx/acessos.log
+PS> docker exec web-vol cat /var/log/nginx/acessos.log
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /sobre.html HTTP/1.1" 200 843 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /pagina-inexistente HTTP/1.1" 404 153 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET /apos-recriacao HTTP/1.1" 404 153 "-" "curl/8.22.0"
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PARTE 3 - LEITURA PELO ALPINE
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker run --rm -v logs-web:/dados alpine tail -n 20 /dados/acessos.log
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:09 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /sobre.html HTTP/1.1" 200 843 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /pagina-inexistente HTTP/1.1" 404 153 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:10 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET /saude HTTP/1.1" 200 20 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:15 +0000] "GET /apos-recriacao HTTP/1.1" 404 153 "-" "curl/8.22.0"
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> docker run -d --name web-vol2 -p 8082:80 -v logs-web:/var/log/nginx meu-web:1.0
+e5788c1790215b72cabf22880a7cbb46fa0ab19ecbb4d6f7df3ae3627b1e919b
+
+PARTE 3 - DOIS CONTAINERS, DUAS PORTAS, MESMO LOG
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8081/origem-8081
+404
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8082/origem-8082
+404
+PS> docker ps --filter name=web-vol
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS                  PORTS                                     NAMES
+e5788c179021   meu-web:1.0   "/docker-entrypoint.…"   1 second ago    Up Less than a second   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp   web-vol2
+376b522518f3   meu-web:1.0   "/docker-entrypoint.…"   9 seconds ago   Up 8 seconds            0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   web-vol
+PS> docker exec web-vol grep -E 'origem-8081|origem-8082' /var/log/nginx/acessos.log
+172.17.0.1 - - [22/Nov/2026:23:47:23 +0000] "GET /origem-8081 HTTP/1.1" 404 153 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:23 +0000] "GET /origem-8082 HTTP/1.1" 404 153 "-" "curl/8.22.0"
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> docker run -d --name web-sem-vol -p 8083:80 meu-web:1.0
+3bd1c9b1b98d31723351e5e337bc9948b51a725c8109a15d5892283058385625
+
+PARTE 3 - COMPARACAO SEM VOLUME
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> curl.exe -sS -o NUL -w '%{http_code}\n' http://localhost:8083/somente-sem-volume
+404
+PS> docker exec web-sem-vol cat /var/log/nginx/acessos.log
+172.17.0.1 - - [22/Nov/2026:23:47:24 +0000] "GET / HTTP/1.1" 200 1052 "-" "curl/8.22.0"
+172.17.0.1 - - [22/Nov/2026:23:47:24 +0000] "GET /somente-sem-volume HTTP/1.1" 404 153 "-" "curl/8.22.0"
+PS> docker rm -f web-sem-vol
+web-sem-vol
+PS> docker run -d --name web-sem-vol -p 8083:80 meu-web:1.0
+9ee05c36d0aac09b94e9b10086ee8e95b2005ecd4b668d8d50e6effd38ea93e8
+PS> docker exec web-sem-vol wc -l /var/log/nginx/acessos.log
+0 /var/log/nginx/acessos.log
+PS> docker exec web-vol sh -c "grep -F /somente-sem-volume /var/log/nginx/acessos.log || echo AUSENTE_DO_VOLUME_COMPARTILHADO"
+AUSENTE_DO_VOLUME_COMPARTILHADO
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> docker rm -f web-sem-vol
+web-sem-vol
+PS> docker rm -f web-vol web-vol2
+web-vol
+web-vol2
+BONUS - DOCKER COMPOSE
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker compose up -d
+
+
+PS> docker compose ps
+NAME       IMAGE         COMMAND                  SERVICE    CREATED        STATUS                  PORTS
+web-vol    meu-web:1.0   "/docker-entrypoint.…"   web-vol    1 second ago   Up Less than a second   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp
+web-vol2   meu-web:1.0   "/docker-entrypoint.…"   web-vol2   1 second ago   Up Less than a second   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp
+PS> curl.exe -sS http://localhost:8081/saude
+ok - 20242003300398
+PS> curl.exe -sS http://localhost:8082/saude
+ok - 20242003300398
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+BONUS - COMPOSE DOWN PRESERVA O VOLUME
+luizzmorais\luizg
+LuizzMorais
+Pasta: C:\Users\luizg\Desktop\atividade-docker-luiz
+
+PS> docker compose down
+PS> docker volume ls
+DRIVER    VOLUME NAME
+local     logs-web
+local     supabase_db_Vencii
+local     supabase_db_praia-hub
+local     supabase_db_praia-hub-mvp-isolated
+local     supabase_edge_runtime_Vencii
+local     supabase_edge_runtime_praia-hub
+local     supabase_edge_runtime_praia-hub-mvp-isolated
+local     supabase_storage_Vencii
+local     supabase_storage_praia-hub
+local     supabase_storage_praia-hub-mvp-isolated
+
+Identificacao da captura: luizzmorais\luizg | LuizzMorais
+PS> python gerar-documento.py
+EVIDENCIAS.pdf: 17 capturas em uma pagina. Abra com zoom para ler os detalhes.
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20261122204734
+**********************

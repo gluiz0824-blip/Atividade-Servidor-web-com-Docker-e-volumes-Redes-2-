@@ -1,0 +1,23 @@
+services:
+  web-vol:
+    build: .
+    image: meu-web:1.0
+    container_name: web-vol
+    ports:
+      - "8081:80"
+    volumes:
+      - logs-web:/var/log/nginx
+
+  web-vol2:
+    image: meu-web:1.0
+    container_name: web-vol2
+    depends_on:
+      - web-vol
+    ports:
+      - "8082:80"
+    volumes:
+      - logs-web:/var/log/nginx
+
+volumes:
+  logs-web:
+    name: logs-web
